@@ -7,6 +7,7 @@ name = "pypi"
 line-bot-sdk = "*"
 flask = "*"
 gunicorn = "*"
+"discord.py" = "*"
 
 [dev-packages]
 
