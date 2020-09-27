@@ -8,6 +8,7 @@ line-bot-sdk = "*"
 flask = "*"
 gunicorn = "*"
 "discord.py" = "*"
+requests = "*"
 
 [dev-packages]
 
