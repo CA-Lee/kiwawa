@@ -7,6 +7,7 @@ from linebot.models import *
 import requests
 
 import os
+import json
 
 app = Flask(__name__)
 
