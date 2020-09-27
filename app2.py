@@ -20,9 +20,11 @@ async def ping(ctx):
 
 @bot.listen()
 async def on_message(message):
+    lotify_message = "＜" + message.author.display_name + "＞：\n"
+    lotify_message += message.content
     lotify.send_message(
         access_token = lotify_token,
-        message = json.dumps(message)
+        message = lotify_message
     )
 
 bot.run(os.environ['DISCORDBOT_TOKEN'])
