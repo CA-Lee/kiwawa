@@ -1,1 +1,2 @@
-web: gunicorn app:app --log-file -
+web: gunicorn l2d:app --log-file -
+worker: python d2l.py
