@@ -38,7 +38,7 @@ def callback():
 def handle_message(event):
     content = event.message.text
     content += "\n" + str(event)
-    profile = line_bot_api.get_profile(event.source.user_id)
+    profile = line_bot_api.get_group_member_profile(event.source.group_id,event.source.user_id)
     request_data = {
         "content":event.message.text,
         "username":profile.display_name,
