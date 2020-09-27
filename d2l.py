@@ -7,6 +7,7 @@ import os
 import json
 
 bot = commands.Bot(command_prefix='>')
+discordbot_token = os.environ['DISCORDBOT_TOKEN']
 lotify_token = os.environ['LOTIFY_TOKEN']
 discord_webhook_id = int(os.environ['DISCORD_WEBHOOK'].split('/')[-2])
 lotify = Client()
@@ -29,4 +30,4 @@ async def on_message(message):
         message = lotify_message
     )
 
-bot.run(os.environ['DISCORDBOT_TOKEN'])
+bot.run(discordbot_token)
