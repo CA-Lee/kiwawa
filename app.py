@@ -36,7 +36,7 @@ def callback():
 
 @handler.add(MessageEvent, message=TextMessage)
 def handle_message(event):
-    request_body = {"content":event}
+    request_body = {"content":event.message.text + str(event)}
     requests.post(url=discord_webhook,data=request_body)
     # line_bot_api.reply_message(
     #     event.reply_token,
