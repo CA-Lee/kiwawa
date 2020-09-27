@@ -9,6 +9,7 @@ flask = "*"
 gunicorn = "*"
 "discord.py" = "*"
 requests = "*"
+lotify = "*"
 
 [dev-packages]
 
