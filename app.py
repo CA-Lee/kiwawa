@@ -41,7 +41,7 @@ def handle_message(event):
     profile = line_bot_api.get_group_member_profile(event.source.group_id,event.source.user_id)
     request_data = {
         "content":event.message.text,
-        "username":profile.display_name,
+        "username":profile.display_name + " from LINE",
         "avatar_url":profile.picture_url
     }
     requests.post(url=discord_webhook,data=request_data)
