@@ -8,6 +8,7 @@ import json
 
 bot = commands.Bot(command_prefix='>')
 lotify_token = os.environ['LOTIFY_TOKEN']
+discord_webhook_id = int(os.environ['DISCORD_WEBHOOK'].split('/')[-2])
 lotify = Client()
 
 @bot.command()
@@ -20,6 +21,7 @@ async def ping(ctx):
 
 @bot.listen()
 async def on_message(message):
+    if message.webhook_id == discord_webhook_id: return
     lotify_message = "＜" + message.author.display_name + "＞：\n"
     lotify_message += message.content
     lotify.send_message(
