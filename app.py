@@ -36,12 +36,15 @@ def callback():
 
 @handler.add(MessageEvent, message=TextMessage)
 def handle_message(event):
-    request_body = {"content":event.message.text + str(event)}
-    requests.post(url=discord_webhook,data=request_body)
-    # line_bot_api.reply_message(
-    #     event.reply_token,
-    #     TextSendMessage(text=event.message.text)
-    # )
+    content = event.message.text
+    content += "\n" + str(event)
+    profile = line_bot_api.get_profile(event.source.user_id)
+    request_data = {
+        "content":event.message.text,
+        "username":profile.display_name,
+        "avatar_url":profile.picture_url
+    }
+    requests.post(url=discord_webhook,data=request_data)
 
 if __name__ == "__main__":
     app.run()
