@@ -4,6 +4,9 @@ LINE／Discord 訊息同步機器人。一個機器人只能服務一組 LINE �
 
 ## 使用教學
 
+### 一鍵部署
+[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy)
+
 總共有 6 個環境變數要設定： 
 ```
 LINEBOT_SECRET
