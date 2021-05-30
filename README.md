@@ -4,13 +4,17 @@ LINE／Discord 訊息同步機器人。一個機器人只能服務一組 LINE �
 
 ## 使用教學
 
-總共有 5 個環境變數要設定： 
+### 一鍵部署
+[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy)
+
+總共有 6 個環境變數要設定： 
 ```
 LINEBOT_SECRET
 LINEBOT_ACCESS_TOKEN
 LOTIFY_TOKEN
 DISCORDBOT_TOKEN
 DISCORD_WEBHOOK
+MESSAGE_CHANNEL_ID(可選)
 ```
 
 ### LINE bot
@@ -29,6 +33,14 @@ https://discord.com/developers/applications => `New Application` => `Bot` => `Ad
 
 Discord 伺服器 => `伺服器設定` => `整合` => `建立 Webhook` => `複製 Webhook 網址` => 設定環境變數 `DISCORD_WEBHOOK`
 
+### Discord channel
+
+Discord 伺服器 => 伺服器頻道 => 右鍵頻道 => `複製ID`(需開啟開發者模式) => 設定環境變數 `MESSAGE_CHANNEL_ID`
+
 ## Author
 
 - CA-Lee
+
+## Contributor
+
+- MirrorShih
