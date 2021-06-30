@@ -44,3 +44,4 @@ Discord 伺服器 => 伺服器頻道 => 右鍵頻道 => `複製ID`(需開啟開�
 ## Contributor
 
 - MirrorShih
+- BWsix(VFLC)
