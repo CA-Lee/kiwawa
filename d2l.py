@@ -27,7 +27,8 @@ async def ping(ctx):
 async def on_message(message):
     if message.webhook_id == discord_webhook_id: return
     if message_channel_id is not None and (message.channel.id != int(message_channel_id)): return
-    lotify_message = message.author.display_name + "：" + message.content
+    lotify_message = message.author.display_name + ": "
+    lotify_message += message.content
     lotify.send_message(
         access_token=lotify_token,
         message=lotify_message
